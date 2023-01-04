@@ -1,3 +1,30 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.header__intro {
+  background-image: -o-linear-gradient(307deg, #9500d3, #11edcf);
+  background-image: linear-gradient(143deg, #9500d3, #11edcf);
+  padding: 5px 5px;
+  -webkit-box-shadow: 0 0 10px 0;
+          box-shadow: 0 0 10px 0;
+  border-radius: 15px;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 55px;
+  color: #fff;
+  font-family: manrope;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
