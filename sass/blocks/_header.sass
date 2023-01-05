@@ -1,15 +1,18 @@
 /* Header */
 .header .container 
-  max-width: 1200px
+  max-width: 100%
 
 
 .header 
     width: 100%
-    padding: 15px 30px
+    height: 64px
+    padding: 0px 30px
 
 
-    background-color: rgba(255, 255, 255, 0.3)
-    backdrop-filter: blur(8px)
+    background-color: rgb(0 0 0 / 95%)
+    //background-color: rgba(255, 255, 255, 0.3)
+    //backdrop-filter: blur(8px)
+    display: flex
     position: fixed
     top: 0
     left: 0
@@ -22,31 +25,94 @@
     justify-content: space-between
     align-items: center
 
-
-.header__menu 
-  background-image: url(../img/menu1.png)
-
-  width: 33px
-  height: 20px
-
-  transition: all 0.2s ease-in-out
-
-
-.header__menu:hover 
-  background-image: url(../img/menu2.png)
-
-  width: 33px
-  height: 20px
-
-
-
 /* BURGER MENU  */
 
+#menu__toggle 
+  opacity: 0
+  display: none
+
+#menu__toggle:checked ~ .menu__btn > span 
+  transform: rotate(45deg)
+
+#menu__toggle:checked ~ .menu__btn > span::before 
+  top: 0
+  transform: rotate(0)
+
+#menu__toggle:checked ~ .menu__btn > span::after 
+  top: 0
+  transform: rotate(90deg)
+
+#menu__toggle:checked ~ .menu__box 
+  visibility: visible
+  left: 0
+
+.hamburger-menu
+  width: 168px
+
+.menu__btn 
+  display: flex
+  align-items: center
+  position: fixed
+  top: 19px
+  // left: 20px
+  width: 26px
+  height: 26px
+  cursor: pointer
+  z-index: 1
+
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after 
+  display: block
+  position: absolute
+  width: 100%
+  height: 2px
+  background-color: #fff
+  transition-duration: .25s
+
+.menu__btn > span::before 
+  content: ''
+  top: -8px
+
+.menu__btn > span::after 
+  content: ''
+  top: 8px
+
+
+.menu__box 
+  display: block
+  position: fixed
+  visibility: hidden
+  top: 0
+  left: -100%
+  width: 300px
+  height: 100%
+  margin: 0
+  padding: 80px 0
+  list-style: none
+  background-color: #ECEFF1
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+  transition-duration: .25s
+
+
+.menu__item 
+  display: block
+  padding: 12px 24px
+  color: #333
+  font-family: 'Roboto', sans-serif
+  font-size: 20px
+  font-weight: 600
+  text-decoration: none
+  transition-duration: .25s
+
+.menu__item:hover 
+  background-color: #CFD8DC
 
 
 /* Nav */
 .nav1 
-    font-size: 30px
+    font-size: 25px
     font-weight: 200
     text-transform: uppercase
 
