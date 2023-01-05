@@ -7,6 +7,7 @@ body {
   font-family: "Manrope";
   background-image: -o-linear-gradient(314deg, #112a5e 0.62%, #323654 83.44%);
   background-image: linear-gradient(136deg, #112a5e 0.62%, #323654 83.44%);
+  color: #fff;
 }
 
 .container {
@@ -347,115 +348,25 @@ body {
   margin: 15px 20px;
 }
 
-/* DOWN INNER */
-.down .container {
-  max-width: 1200px;
-}
-
-.down__inner {
-  float: left;
-}
-
-.down__inner2 {
-  float: right;
-}
-
-.down:after {
-  content: "";
-}
-.down__inner,
-.down__inner2 {
-  margin-top: 100px;
-}
-
-.inner__contacts,
-.inner__addres,
-.inner__grafik {
-  margin-bottom: 150px;
-  font-size: 30px;
+h3 {
   font-weight: 500;
-  color: #fff;
+  font-size: 40px;
+  letter-spacing: 3px;
 }
 
-.inner__addres {
-  margin-bottom: 198px;
-}
-
-.contacts__1 {
-  position: relative;
-}
-
-.contacts__title,
-.grafik__title,
-.addres__title,
-.maps__title {
-  font-weight: 300;
-  font-size: 50px;
-  color: #fff;
-  letter-spacing: 2px;
-}
-
-.contacts__icon-call {
-  background-image: url(../img/call1.png);
-  height: 22px;
-  width: 22px;
-  position: absolute;
-  top: 12px;
-}
-
-.contacts__2 {
-  position: relative;
-}
-
-.contacts__icon-mail {
-  background-image: url(../img/mail1.png);
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: 14px;
-}
-
-.contacts__text {
-  padding-left: 35px;
-  font-weight: 400;
-}
-
-.contacts__text,
-.addres__text,
-.maps__text {
-  padding-left: 35px;
+p {
   font-weight: 200;
-  color: #fff;
+  font-size: 35px;
 }
 
-.grafik__text {
-  font-weight: 200;
-}
-
-.inner__addres {
-  position: relative;
-}
-
-.addres__icon-addres {
-  background-image: url(../img/adres.png);
-  width: 21px;
-  height: 30px;
-  position: absolute;
-  top: 88px;
-}
-
-.contacts__text_a {
+.a_links {
   color: #fff;
   text-decoration: none;
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 2px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  -webkit-transition: color 0.1s linear;
-  -o-transition: color 0.1s linear;
-  transition: color 0.1s linear;
-}
-
-.contacts__text_a:hover {
-  color: #4069ff;
 }
 
 /* FOOTER */
