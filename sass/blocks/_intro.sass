@@ -1,0 +1,491 @@
+.intro 
+  margin-top: 130px
+  text-align: center
+
+
+.intro__inner 
+  margin-top: 15px
+
+
+
+.intro__img 
+  width: 800px
+  height: 450px
+
+  margin-left: 20px
+  margin-right: 20px
+  margin-top: 20px
+  object-fit: cover
+  border-radius: 30px
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px
+
+
+.intro__img img 
+  width: initial
+  height: 100%
+
+
+.intro:after 
+  content:''
+  display:table
+  clear:both
+
+
+.filter__img 
+  margin: 15px 20px
+
+
+/* DOWN INNER */
+
+.down .container 
+  max-width: 1200px
+
+
+.down__inner 
+  float: left
+
+
+.down__inner2 
+  float: right
+
+
+.down:after 
+  content:''
+  display:table
+  clear:both
+
+
+.down__inner,
+.down__inner2 
+  margin-top: 100px
+
+
+
+
+
+.inner__contacts,
+.inner__addres,
+.inner__grafik 
+  margin-bottom: 150px
+  font-size: 30px
+  font-weight: 500
+  color: #fff
+
+
+.inner__addres 
+  margin-bottom: 198px
+
+
+
+
+
+
+.contacts__1 
+  position: relative
+
+
+.contacts__title,
+.grafik__title,
+.addres__title,
+.maps__title 
+  font-weight: 300
+  font-size: 50px
+  color: #fff
+  letter-spacing: 2px
+
+
+
+
+.contacts__icon-call 
+  background-image: url(../img/call1.png)
+  height: 22px
+  width: 22px
+  position: absolute
+  top: 12px
+
+
+.contacts__2 
+  position: relative
+
+
+.contacts__icon-mail 
+  background-image: url(../img/mail1.png)
+  width: 22px
+  height: 22px
+  position: absolute
+  top: 14px
+
+
+.contacts__text 
+  padding-left: 35px
+  font-weight: 400
+
+
+.contacts__text,
+.addres__text,
+.maps__text 
+  padding-left: 35px
+  font-weight: 200
+  color: #fff
+
+
+
+.grafik__text 
+  font-weight: 200
+
+
+.inner__addres 
+  position: relative
+
+
+.addres__icon-addres 
+  background-image: url(../img/adres.png)
+  width: 21px
+  height: 30px
+  position: absolute
+  top: 88px
+
+
+
+.contacts__text_a 
+  color: #fff
+  text-decoration: none
+
+  border-bottom-width: 1px
+  border-bottom-style: solid
+
+  transition: color .1s linear
+
+
+
+.contacts__text_a:hover 
+  color: #4069ff
+
+
+
+/* Header */
+.header .container 
+  max-width: 1200px
+
+
+.header 
+    width: 100%
+    padding: 15px 30px
+
+
+    background-color: rgba(255, 255, 255, 0.3)
+    backdrop-filter: blur(8px)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+
+
+.header__inner 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+.header__menu 
+  background-image: url(../img/menu1.png)
+
+  width: 33px
+  height: 20px
+
+  transition: all 0.2s ease-in-out
+
+
+.header__menu:hover 
+  background-image: url(../img/menu2.png)
+
+  width: 33px
+  height: 20px
+
+
+
+/* BURGER MENU  */
+
+.menu 
+  display: block
+  width: 320px
+  height: 100%
+  background-color: #ccc
+  position: fixed
+  top: 0
+  right: 0
+  transform: translateX(100%)
+  transition: transform .3s ease-in
+  z-index: 1001
+
+
+.menu.active 
+  transform: translateX(0%)
+
+
+
+.menu ul 
+  margin: 0
+  padding: 0
+  list-style: none
+
+
+/* burger */
+
+.menu .menu-burger__header 
+  width: 30px
+  height: 30px
+  border-radius: 3px
+  background: #333
+  position: absolute
+  right: calc(100% + 10px)
+  top: 36px
+  cursor: pointer
+
+
+/* burger | open */
+
+.menu .menu-burger__header::before,
+.menu .menu-burger__header > span,
+.menu .menu-burger__header::after 
+  content: ''
+  display: block
+  width: 20px
+  height: 2px
+  border-radius: 2px
+  background: #fff
+  position: absolute
+  left: 50%
+  transform: translate(-50%, -50%)
+  transition-duration: .3s
+  transition-timing-function: ease
+
+
+.menu .menu-burger__header::before 
+  top: calc(50% - 8px)
+  transition-property: top, transform
+
+
+.menu .menu-burger__header > span 
+  top: 50%
+  transition-property: opacity
+
+
+.menu .menu-burger__header::after 
+  top: calc(50% + 8px)
+  transition-property: top, transform
+
+
+/* burger active | close */
+
+.menu.active .menu-burger__header::before 
+  top: 50%
+  transform: translate(-50%, -50%) rotate(45deg)
+
+
+.menu.active .menu-burger__header > span 
+  opacity: 0
+
+
+.menu.active .menu-burger__header::after 
+  top: 50%
+  transform: translate(-50%, -50%) rotate(-45deg)
+
+
+/* menu list */
+
+.menu .topmenu 
+  display: block
+  width: 100%
+  max-height: 100%
+  overflow: hidden auto
+  padding: 10px 20px
+  box-sizing: border-box
+
+
+.menu .topmenu a 
+  display: block
+  color: inherit
+  text-decoration: none
+
+
+.menu .topmenu > li:not(:last-child) 
+  margin-bottom: 1em
+
+
+.menu .topmenu > li > a 
+  font-weight: bold
+
+
+/* submenu list */
+
+.menu .topmenu .submenu 
+  display: block
+  padding-left: 1em
+  margin-top: .5em
+
+
+.menu .topmenu .submenu > li:not(:last-child) 
+  margin-bottom: .5em
+
+
+.menu .topmenu .submenu li:hover 
+  color: orangered
+
+
+/* Nav */
+.nav1 
+    font-size: 30px
+    font-weight: 200
+    text-transform: uppercase
+
+
+.nav__link 
+    display: inline-block
+    margin: 0 15px
+    position: relative
+
+    color: #fff
+    text-decoration: none
+
+    transition: color .1s linear
+
+
+.nav__link_menu 
+
+  display: inline-block
+  margin: 0 15px
+  position: relative
+
+
+
+
+.nav__link:after 
+    content: ""
+    display: block
+    width: 100%
+    height: 3px
+
+    background-color: #4069ff
+    opacity: 0
+
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: 1
+
+    transition: opacity .1s linear
+
+
+.nav__link:hover 
+    color: #4069ff
+
+
+.nav__link:hover:after,
+.nav__link.active:after 
+    opacity: 1
+
+
+.nav__link.active 
+    color: #4069ff
+
+
+
+
+/* FOOTER */
+
+.footer 
+  margin-top: 50px
+
+
+.footer .container 
+  max-width: 1200px
+
+
+.footer__all 
+  display: flex
+  color: #fff
+  padding: 30px
+
+  justify-content: space-evenly
+  background-color: rgba(255, 255, 255, 0.3)
+  backdrop-filter: blur(8px)
+  border-radius: 30px 30px 0 0
+
+
+.ul-fixed 
+  list-style-type: none
+
+
+
+
+.footer__katalog,
+.footer__info,
+.footer__social 
+  margin-right: 50px
+  letter-spacing: 1px
+
+
+.footer__info 
+  display: grid
+  justify-items: start
+
+
+.katalog__title,
+.info__title,
+.social__title 
+  font-weight: 500
+  font-size: 20px
+  letter-spacing: 2px
+
+
+.katalog__text 
+  font-weight: 500
+
+
+
+.info__text 
+  color: #fff
+
+  text-decoration: none
+
+  transition: color .1s linear
+
+
+
+.info__text:hover 
+  color: #4069ff
+
+
+.social__logos a 
+  display: inline-flex
+  padding-top: 2px
+  margin-right: 5px
+
+
+.social__logo_inst 
+  background-image: url(../img/inst.png)
+
+  width: 22px
+  height: 22px
+
+  transition: all 0.2s ease-in-out
+
+
+.social__logo_vk 
+  background-image: url(../img/vk.png)
+
+  width: 24px
+  height: 22px
+
+  transition: all 0.2s ease-in-out
+
+
+.social__logo_inst:hover 
+  background-image: url(../img/inst2.png)
+
+
+.social__logo_vk:hover 
+  background-image: url(../img/vk2.png)
+
