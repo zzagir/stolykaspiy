@@ -312,6 +312,38 @@ body {
   margin: 15px 20px;
 }
 
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8 {
+  position: relative;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight {
+  position: absolute;
+}
+
+.img__title {
+  bottom: 400px;
+  left: 60px;
+}
+
+.img__text {
+  bottom: 370px;
+  left: 60px;
+}
+
 .down {
   margin-top: 80px;
 }
