@@ -1,2 +1,36 @@
 кнопка spikimi
 кнопка обратной связи в меню с подключением к тг
+текст на картинке 
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6, 
+.img7,
+.img8
+  position: relative
+ 
+ 
+.one, 
+.two,
+.three, 
+.four,
+.five, 
+.six, 
+.seven, 
+.eight 
+  position: absolute
+
+  
+.intro__img 
+  width: 800px
+  height: 450px
+
+  margin-left: 20px
+  margin-right: 20px
+  margin-top: 20px
+  object-fit: cover
+  border-radius: 30px
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px
