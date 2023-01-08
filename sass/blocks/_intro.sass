@@ -18,12 +18,30 @@
   object-fit: cover
   border-radius: 15px
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px
+  transition-duration: .25s
 
 
 .intro__img 
   img 
     width: initial
     height: 100%
+
+.intro__a:hover .intro__img
+  opacity: 0.5
+
+.intro__a:hover .img__main
+  opacity: 1
+
+.img__title:hover
+  color: #428770
+  text-shadow: 0 0 20px #428770
+
+.img__text:hover
+  color: #428770
+  text-shadow: 0 0 20px #428770
+
+
+ 
 
 
 .intro:after 
@@ -38,20 +56,23 @@
 .intro__a
   position: relative
 
-.img__title,
-.img__text
+.img__main
   position: absolute
+  opacity: 0
 
-  color: black
+  // color: #428770
+  color: white
   font-size: 50px
   font-weight: 300
   
 
 
 .img__title
-  bottom: 80px
+  bottom: 100px
   left: 190px
+  transition: color .2s linear
 
 .img__text
   bottom: 20px
-  left: 190px
+  left: 327px
+  transition: color .2s linear

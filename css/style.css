@@ -143,6 +143,12 @@ body {
   left: 0;
 }
 
+#menu__toggle:checked ~ .menu__box1 {
+  display: block;
+  visibility: visible;
+  left: 0;
+}
+
 .hamburger-menu {
   width: 168px;
 }
@@ -186,7 +192,13 @@ body {
 }
 
 .menu__box {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   visibility: hidden;
   top: 0;
@@ -199,6 +211,24 @@ body {
   background-color: rgba(0, 0, 0, 0.9647058824);
   -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.25s;
+       -o-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.menu__box li:last-of-type {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.menu__box1 {
+  position: absolute;
+  top: 800px;
+  padding: 36px;
+  list-style: none;
+  left: -100%;
+  visibility: hidden;
   -webkit-transition-duration: 0.25s;
        -o-transition-duration: 0.25s;
           transition-duration: 0.25s;
@@ -367,11 +397,32 @@ body {
   border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 24px 2px;
           box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 24px 2px;
+  -webkit-transition-duration: 0.25s;
+       -o-transition-duration: 0.25s;
+          transition-duration: 0.25s;
 }
 
 .intro__img img {
   width: initial;
   height: 100%;
+}
+
+.intro__a:hover .intro__img {
+  opacity: 0.5;
+}
+
+.intro__a:hover .img__main {
+  opacity: 1;
+}
+
+.img__title:hover {
+  color: #428770;
+  text-shadow: 0 0 20px #428770;
+}
+
+.img__text:hover {
+  color: #428770;
+  text-shadow: 0 0 20px #428770;
 }
 
 .intro:after {
@@ -385,22 +436,28 @@ body {
   position: relative;
 }
 
-.img__title,
-.img__text {
+.img__main {
   position: absolute;
-  color: black;
+  opacity: 0;
+  color: white;
   font-size: 50px;
   font-weight: 300;
 }
 
 .img__title {
-  bottom: 80px;
+  bottom: 100px;
   left: 190px;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 .img__text {
   bottom: 20px;
-  left: 190px;
+  left: 327px;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 .down {
