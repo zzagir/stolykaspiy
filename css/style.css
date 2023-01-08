@@ -239,6 +239,22 @@ body {
   background-color: #428770;
 }
 
+.menu__bottom {
+  position: absolute;
+  bottom: 110px;
+}
+
+.menu__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 25px;
+}
+
+.vk {
+  margin-right: 15px;
+}
+
 .button {
   color: #ffffff;
   font-size: 15px;
@@ -287,14 +303,16 @@ body {
 .popup form input {
   margin-bottom: 30px;
   height: 50px;
-  font-size: 20px;
-  border: 2px solid #000000;
+  font-size: 17px;
+  border: 1px solid #000000;
+  padding: 10px;
 }
 
 .popup form input[type=submit] {
   background: #000000;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .close-popup {
@@ -405,12 +423,10 @@ body {
 
 .img__title:hover {
   color: #fff;
-  text-shadow: 0 0 20px #000;
 }
 
 .img__text:hover {
   color: #fff;
-  text-shadow: 0 0 20px #000;
 }
 
 .intro:after {
@@ -429,7 +445,7 @@ body {
   opacity: 0;
   color: white;
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .img__title {
@@ -438,6 +454,7 @@ body {
   -webkit-transition: text-shadow 0.5s ease;
   -o-transition: text-shadow 0.5s ease;
   transition: text-shadow 0.5s ease;
+  text-shadow: 0 0 20px #000;
 }
 
 .img__text {
@@ -446,6 +463,7 @@ body {
   -webkit-transition: text-shadow 0.5s ease;
   -o-transition: text-shadow 0.5s ease;
   transition: text-shadow 0.5s ease;
+  text-shadow: 0 0 20px #000;
 }
 
 .down {

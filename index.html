@@ -26,8 +26,10 @@
               <li><a class="menu__item" href="#">Как заказать?</a></li>
               <li><a class="menu__item" href="#">Отзывы</a></li>
               <li><a class="menu__item" href="#">Вакансии</a></li>
-              <li><a class="menu__item inst" href="#"><img src="img/inst.png" alt=""></a></li>
-              <li><a class="menu__item vk" href="#"><img src="img/vk.png" alt=""></a></li>
+              <li class="menu__bottom"><div class="menu__social">
+                <a class="vk" href="#"><div class="social__logo_inst"></div></a>
+                <a class="inst" href="#"><div class="social__logo_vk"></div></a>
+              </div></li>
               <li><a href="#" class="button open-popup">Оставить заявку</a></li>
             </ul>
 
@@ -36,8 +38,8 @@
               <div class="popup">
                   <img class="close-popup" src="img/close.png" alt="">
                   <form action="">
-                      <input type="text">
-                      <input type="tel">
+                      <input type="text" name="name" placeholder="Имя" autocomplete="off">
+                      <input type="text" name="phone" placeholder="Телефон" autocomplete="off">
                       <input value="Отправить заявку" type="submit">
                   </form>
               </div>
