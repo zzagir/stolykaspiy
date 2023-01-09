@@ -496,9 +496,9 @@ body {
 }
 
 .down__inner {
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 h3 {
@@ -691,12 +691,12 @@ p {
 
 .about__text {
   position: absolute;
-  left: calc(50% - 27px);
+  left: calc(50% - 34px);
   top: 570px;
   font-size: 20px;
 }
 
 .about__title-text {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 25px;
 }/*# sourceMappingURL=style.css.map */
