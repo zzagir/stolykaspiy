@@ -308,11 +308,19 @@ body {
   padding: 10px;
 }
 
-.popup form input[type=submit] {
+.popup form button[type=submit] {
   background: #000000;
   color: #ffffff;
   font-size: 20px;
   font-weight: 200;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.popup form button[type=submit]:active {
+  background: #428770;
+  color: #FFF;
 }
 
 .close-popup {
@@ -326,9 +334,24 @@ body {
   overflow-y: hidden;
 }
 
+.popup-text {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.popup-a {
+  color: #428770;
+  letter-spacing: 2px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+
 /* Nav */
 .nav1 {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 200;
   text-transform: uppercase;
 }
@@ -337,6 +360,7 @@ body {
   display: inline-block;
   margin: 0 15px;
   position: relative;
+  font-size: 25px;
   color: #fff;
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
@@ -438,6 +462,7 @@ body {
 
 .intro__a {
   position: relative;
+  text-decoration: none;
 }
 
 .img__main {
@@ -556,7 +581,6 @@ p {
 .footer__katalog,
 .footer__info,
 .footer__social {
-  margin-right: 50px;
   letter-spacing: 1px;
 }
 
@@ -622,4 +646,8 @@ p {
 
 .social__logo_vk:hover {
   background-image: url(../img/vk2.png);
+}
+
+.about {
+  margin-top: 60px;
 }/*# sourceMappingURL=style.css.map */

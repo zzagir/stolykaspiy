@@ -174,11 +174,18 @@
     border: 1px solid #000000
     padding: 10px
 
-.popup form input[type="submit"] 
+.popup form button[type="submit"] 
     background: #000000
     color: #ffffff
     font-size: 20px
     font-weight: 200
+    padding: 12px
+    cursor: pointer
+    border: none
+
+.popup form button[type="submit"]:active
+    background: #428770
+    color: #FFF
 
 .close-popup 
     position: absolute
@@ -189,9 +196,22 @@
 .no-scroll 
     overflow-y: hidden
 
+.popup-text
+  color: #000
+  font-size: 18px
+  margin-bottom: 30px
+  font-weight: 400
+
+.popup-a
+  color: #428770
+  letter-spacing: 2px
+  border-bottom-width: 1px
+  border-bottom-style: solid   
+  text-decoration: none
+
 /* Nav */
 .nav1 
-    font-size: 25px
+    font-size: 15px
     font-weight: 200
     text-transform: uppercase
 
@@ -200,6 +220,7 @@
     display: inline-block
     margin: 0 15px
     position: relative
+    font-size: 25px
 
     color: #fff
     text-decoration: none
