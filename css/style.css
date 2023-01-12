@@ -502,7 +502,7 @@ body {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 200;
   font-size: 50px;
   letter-spacing: 3px;
 }
@@ -511,6 +511,7 @@ p {
   margin-left: 10px;
   font-weight: 200;
   font-size: 35px;
+  color: #ccc;
 }
 
 .a_links {
@@ -699,4 +700,62 @@ p {
 .about__title-text {
   font-weight: 200;
   font-size: 25px;
+}
+
+.table__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 70px;
+  padding: 15px;
+}
+
+.table__image img {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 1080px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.slider {
+  width: 70%;
+  margin: 100px auto;
+  max-width: 1200px;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(255, 255, 255);
+}
+
+.slick-slide {
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 0.5;
+}
+
+.slick-current {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
