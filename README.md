@@ -1,1 +1,1 @@
-# stolykaspiy.github.io
+# zzagir.github.io/stolykaspiy/
