@@ -5,9 +5,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sweetalert.min.css">
     <link rel="stylesheet" type="text/css" href="./slick/slick.css">
-   <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
     <link rel="shortcut icon" href="img/lg.png" type="image/png">
     <title>Stoly Kaspiy</title>
+
+    <style type="text/css">
+      .slick-dots li button:before {
+        color: grey;
+        }
+
+      .slick-dots li.slick-active button:before {
+        color: white !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,7 +41,7 @@
                 <a class="vk" href="#"><div class="social__logo_inst"></div></a>
                 <a class="inst" href="#"><div class="social__logo_vk"></div></a>
               </div></li>
-              <li><a href="#" class="button open-popup">Оставить заявку</a></li>
+              <li><a href="#" class="button open-popup">Заказать звонок</a></li>
             </ul>
 
 
@@ -52,8 +62,8 @@
 
             <nav class="nav1">
               <ul style="list-style-type: none; display: flex;">
-                <li><a class="nav__link" href="#">Столы</a></li>
-                <li><a class="nav__link" href="#">Стулья</a></li>
+                <li><a class="nav__link" href="index.html">Столы</a></li>
+                <li><a class="nav__link" href="chairs.html">Стулья</a></li>
               </ul>
             </nav>
             
@@ -66,12 +76,18 @@
   </header>
   
   <div class="table-1">
+    <div class="table-name">
+      <h2 class="table-name-name">Стол «Королевский стол»</h2>
+    </div>
     <div class="table__image">
       <img src="img/4444.jpg" alt=""> 
     </div>
   </div>
   
-  <section class="variable slider">
+  <p class="table-slade">Слайд-шоу стола</p>
+
+  <div class="container">
+    <section class="variable slider">
     <div>
       <img src="img/1.jpg">
     </div>
@@ -88,6 +104,8 @@
       <img src="img/5.jpg">
     </div>
   </section>
+  </div>
+  
   
   
   <div class="down">
@@ -177,7 +195,14 @@
       $(".variable").slick({
         dots: true,
         infinite: true,
-        variableWidth: true
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false
+            }
+          }
+        ]
       });
       
     });

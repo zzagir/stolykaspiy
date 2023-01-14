@@ -713,7 +713,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 70px;
   padding: 15px;
 }
 
@@ -724,6 +723,17 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+.table-name-name {
+  text-align: center;
+  margin: 80px 0 0 0;
+  font-size: 30px;
+}
+
+.table-slade {
+  text-align: center;
+  margin: 30px 0 -80px 0;
 }
 
 .slider {
