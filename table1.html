@@ -73,39 +73,42 @@
     </div>
   </header>
 
-  <div class="slider" style="margin-top: 100px;">
-    <div class="container">
-      <div class="fotorama" data-width="611" data-height="344"
-        style="background-color: white; max-width: 611px; border-radius: 10px;" data-nav="thumbs">
+  <div class="slider" style="margin-top: 100px; padding-left: 20px;">
+    <div class="container" style="display: flex;">
+
+      <div class="fotorama" data-width="611" data-height="344" style="background-color: white; border-radius: 10px;"
+        data-nav="thumbs">
         <img src="img/11.jpg">
         <img src="img/22.jpg">
         <img src="img/33.jpg">
         <img src="img/44.jpg">
       </div>
-      <p style="position: absolute; left: 52%; top: 100px; color: white;">Стол «Королевский»</p>
-      <button style="padding: 10px;" class="size-price first-price active">1200(1600)x850</button>
-      <button style="padding: 10px;" class="size-price second-price">1200(1600)x850</button>
-      <button style="padding: 10px;" class="size-price third-price">1200(1600)x850</button>
-      <button style="padding: 10px;" class="size-price four-price">1200(1600)x850</button>
-      <p class="price">150</p>
-    </div>
-  </div>
 
-  <!-- <div class="container">
-    <div class="slider-container">
-      <button class="slider-prev">◀</button>
-      <div class="slider">
-        <div class="slider-line">
-          <img src="./img/1.jpg" alt="" class="slider-img">
-          <img src="./img/2.jpg" alt="" class="slider-img">
-          <img src="./img/3.jpg" alt="" class="slider-img">
-          <img src="./img/4.jpg" alt="" class="slider-img">
+      <div>
+        <p style="margin-left: 30px; font-weight: 200; font-size: 35px;">Стол «Королевский»
+        </p>
+        <div style="margin: 20px 0 5px 30px;">
+          <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 10px;">Размеры стола (ДхШ), мм:</p>
+          <button class="size-price first-price active">1200(1600)x850</button>
+          <button class="size-price second-price">1600(2000)x920</button>
         </div>
+        <div style="margin: 0 0 0 30px;">
+          <button class="size-price third-price">1400(1800)x850</button>
+          <button class="size-price fourth-price">2000(2400)x100</button>
+        </div>
+        <div style="margin: 0 0 0 30px;">
+          <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 5px;">Варианты цветов:</p>
+          <button class="size-color first-color active"></button>
+          <button class="size-color second-color"></button>
+        </div>
+        <p style="color: #ccc; margin: 10px 0 -10px 30px; font-weight: 200; font-size: 25px;">Цена:</p>
+        <p class="price" style="margin-left: 30px; font-weight: 200; font-size: 30px;">150 000₽</p>
       </div>
 
-      <button class="slider-next">▶</button>
+
+      <!-- style="margin: 341px 0px 0px -313px;" -->
     </div>
-  </div> -->
+  </div>
 
 
   <div class="down">
@@ -123,7 +126,7 @@
 
           <div class="inner__adres">
             <h3>Наш адрес</h3>
-            <p>ул. Дахадаева 44, Город Каспийск</p>
+            <p class="down__p">ул. Дахадаева 44, Город Каспийск</p>
           </div>
         </div>
 
@@ -136,8 +139,8 @@
 
           <div class="inner__grafik">
             <h3>График работы</h3>
-            <p>Пн-Пт: 10:00 - 20:00</p>
-            <p>Сб-Вс: 11:00 - 29:00</p>
+            <p class="down__p">Пн-Пт: 10:00 - 20:00</p>
+            <p class="down__p">Сб-Вс: 11:00 - 29:00</p>
           </div>
         </div>
 
@@ -188,6 +191,7 @@
 
   <script src="js/jquery-3.6.3.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/tables.js"></script>
   <script src="js/form.js"></script>
   <script src="js/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>

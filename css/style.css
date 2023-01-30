@@ -515,7 +515,7 @@ h3 {
   letter-spacing: 3px;
 }
 
-p {
+.down__p {
   margin-left: 10px;
   font-weight: 200;
   font-size: 35px;
@@ -710,43 +710,37 @@ p {
   font-size: 25px;
 }
 
-.table__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 15px;
-}
-
-.table__image img {
-  width: 100%;
-  max-width: 1200px;
-  max-height: 1080px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-}
-
-.table-name-name {
-  text-align: center;
-  margin: 80px 0 0 0;
-  font-size: 30px;
-}
-
 .size-price {
+  width: 150px;
+  padding: 10px;
+  font-size: 15px;
   border: 1px solid black;
   background-color: #3d3d3d;
   color: white;
   font-family: Manrope;
+  cursor: pointer;
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.size-color {
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.first-color {
+  background-image: url("../img/var1.png");
+}
+
+.second-color {
+  background-image: url("../img/var2.png");
 }
 
 .active {
