@@ -403,6 +403,14 @@ body {
   color: #428770;
 }
 
+.invalid-control {
+  border-color: red !important;
+}
+
+.form-control {
+  border: 1px solid;
+}
+
 .intro {
   margin-top: 70px;
   text-align: center;
@@ -733,7 +741,7 @@ p {
 
 .table-slade {
   text-align: center;
-  margin: 30px 0 -80px 0;
+  margin: 100px 0 -80px 0;
 }
 
 .slider {
