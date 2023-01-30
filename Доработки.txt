@@ -34,3 +34,36 @@
   object-fit: cover
   border-radius: 30px
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false
+            }
+          }
+        ]
+      });
+
+    });
+
+  </script>
+
+  
+  <style type="text/css">
+    .slick-dots li button:before {
+      color: grey;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: white !important;
+    }
+  </style>

@@ -5,20 +5,9 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sweetalert.min.css">
-  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/lg.png" type="image/png">
   <title>Stoly Kaspiy</title>
-
-  <style type="text/css">
-    .slick-dots li button:before {
-      color: grey;
-    }
-
-    .slick-dots li.slick-active button:before {
-      color: white !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -84,37 +73,39 @@
     </div>
   </header>
 
-  <!-- <div class="table-1">
-    <div class="table-name">
-      <h2 class="table-name-name">Стол «Королевский стол»</h2>
+  <div class="slider" style="margin-top: 100px;">
+    <div class="container">
+      <div class="fotorama" data-width="611" data-height="344"
+        style="background-color: white; max-width: 611px; border-radius: 10px;" data-nav="thumbs">
+        <img src="img/11.jpg">
+        <img src="img/22.jpg">
+        <img src="img/33.jpg">
+        <img src="img/44.jpg">
+      </div>
+      <p style="position: absolute; left: 52%; top: 100px; color: white;">Стол «Королевский»</p>
+      <button style="padding: 10px;" class="size-price first-price active">1200(1600)x850</button>
+      <button style="padding: 10px;" class="size-price second-price">1200(1600)x850</button>
+      <button style="padding: 10px;" class="size-price third-price">1200(1600)x850</button>
+      <button style="padding: 10px;" class="size-price four-price">1200(1600)x850</button>
+      <p class="price">150</p>
     </div>
-    <div class="table__image">
-      <img src="img/4444.jpg" alt=""> 
-    </div>
-  </div> -->
-
-  <p class="table-slade">Слайд-шоу стола</p>
-
-  <div class="container">
-    <section class="variable slider">
-      <div>
-        <img src="img/1.jpg">
-      </div>
-      <div>
-        <img src="img/2.jpg">
-      </div>
-      <div>
-        <img src="img/3.jpg">
-      </div>
-      <div>
-        <img src="img/4.jpg">
-      </div>
-      <div>
-        <img src="img/5.jpg">
-      </div>
-    </section>
   </div>
 
+  <!-- <div class="container">
+    <div class="slider-container">
+      <button class="slider-prev">◀</button>
+      <div class="slider">
+        <div class="slider-line">
+          <img src="./img/1.jpg" alt="" class="slider-img">
+          <img src="./img/2.jpg" alt="" class="slider-img">
+          <img src="./img/3.jpg" alt="" class="slider-img">
+          <img src="./img/4.jpg" alt="" class="slider-img">
+        </div>
+      </div>
+
+      <button class="slider-next">▶</button>
+    </div>
+  </div> -->
 
 
   <div class="down">
@@ -199,29 +190,8 @@
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
   <script src="js/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
   <script type="text/javascript" src="https://spikmi.org/Widget?Id=16171"></script>
-
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function () {
-
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        responsive: [
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false
-            }
-          }
-        ]
-      });
-
-    });
-
-  </script>
 
 </body>
 
