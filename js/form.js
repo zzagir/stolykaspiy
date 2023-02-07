@@ -8,8 +8,8 @@ jQuery(document).ready(function () {
             success: swal({
                 title: "С вами свяжутся в скором времени!",
                 type: "success",
-                showConfirmButton: false,
-                timer: 2000
+                showConfirmButton: true,
+                timer: 3000
             })
         });
         $(this).find('input, textarea').prop('disabled', true);
