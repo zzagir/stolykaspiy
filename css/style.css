@@ -719,6 +719,12 @@ body {
   font-size: 25px;
 }
 
+.slider {
+  margin-top: 100px;
+  padding-left: 20px;
+  margin-bottom: 100px;
+}
+
 .size-price {
   width: 150px;
   padding: 10px;
@@ -784,4 +790,57 @@ body {
   font-family: "Manrope";
   font-size: 14px;
   cursor: pointer;
+}
+
+.product-description {
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+
+.product-information {
+  padding-left: 20px;
+}
+
+table.iksweb {
+  text-decoration: none;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+table tbody {
+  font-weight: 200;
+}
+
+table.iksweb th {
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #fff;
+}
+
+table.iksweb td {
+  font-size: 20px;
+  color: #fff;
+}
+
+table.iksweb td,
+table.iksweb th {
+  white-space: pre-wrap;
+  padding: 18px 5px;
+  line-height: 13px;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+table.iksweb tr:hover {
+  background-color: #d9d9d9;
+}
+
+table.iksweb tr:hover td {
+  color: #000000;
+  cursor: default;
 }/*# sourceMappingURL=style.css.map */

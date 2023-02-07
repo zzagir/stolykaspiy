@@ -12,7 +12,8 @@ jQuery(document).ready(function () {
                 timer: 3000
             })
         });
-        $(this).find('input, textarea').prop('disabled', true);
+        // $(this).find('input, textarea').prop('disabled', true);
+        // $(this).find('button').prop('disabled', true);
         event.preventDefault();
     });
 });
