@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sweetalert.min.css">
   <link rel="shortcut icon" href="img/lg.png" type="image/png">
@@ -48,10 +51,12 @@
               <img class="close-popup" src="img/close.png" alt="">
               <form>
                 <p class="popup-text" style="text-align: center; font-size: 35px;">Заказать звонок</p>
-                <input type="text" name="name" placeholder="Имя">
-                <input type="tel" name="phone" placeholder="Телефон">
-                <p class="popup-text">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
-                    href="#">своих персональных данных</a></p>
+                <input type="text" name="name" id="name" placeholder="Имя">
+                <input type="tel" name="phone" id="phone" placeholder="Телефон">
+                <div id="errorMess"></div>
+                <p class="popup-text-down">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
+                    href="#">своих
+                    персональных данных</a></p>
                 <button type="submit">Отправить</button>
               </form>
             </div>

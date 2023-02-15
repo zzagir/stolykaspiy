@@ -15,3 +15,4 @@ $('.popup-bg').click(function (e) {
     $('html').removeClass('no-scroll');
   }
 });
+

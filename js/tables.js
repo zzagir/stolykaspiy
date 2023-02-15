@@ -32,11 +32,29 @@ $('.size-color').click(function () {
 });
 
 $('.first-color').click(function () {
-    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="344" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/11.jpg"><img src="img/22.jpg"><img src="img/33.jpg"><img src="img/44.jpg"></div>');
+    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/11.jpg"><img src="img/22.jpg"><img src="img/33.jpg"><img src="img/44.jpg"></div>');
     reloadScript('js/fotorama.js');
 });
 
 $('.second-color').click(function () {
-    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="344" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>');
+    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>');
     reloadScript('js/fotorama.js');
+});
+
+$('.open-popup-shop').click(function (e) {
+    e.preventDefault();
+    $('.popup-shop-bg').fadeIn(800);
+    $('html').addClass('no-scroll');
+});
+
+$('.close-popup').click(function () {
+    $('.popup-shop-bg').fadeOut(800);
+    $('html').removeClass('no-scroll');
+});
+
+$('.popup-shop-bg').click(function (e) {
+    if (!$(e.target).closest(".popup-shop").length) {
+        $('.popup-shop-bg').fadeOut(600);
+        $('html').removeClass('no-scroll');
+    }
 });

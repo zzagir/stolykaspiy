@@ -169,7 +169,10 @@
   border: 1px solid #000000
   padding: 10px
 
-.popup form button[type="submit"]
+.popup form input[type="tel"]
+  margin-bottom: 10px
+
+.popup-button
   background: #000000
   color: #ffffff
   font-size: 20px
@@ -178,7 +181,7 @@
   cursor: pointer
   border: none
 
-.popup form button[type="submit"]:active
+.popup-button:active
   background: #428770
   color: #FFF
 
@@ -196,6 +199,14 @@
   font-size: 18px
   margin-bottom: 30px
   font-weight: 400
+  text-align: center
+  font-size: 35px
+
+.popup-text-down
+  color: #000
+  font-size: 18px
+  margin-bottom: 30px
+  font-weight: 400
 
 .popup-a
   color: #428770
@@ -203,6 +214,11 @@
   border-bottom-width: 1px
   border-bottom-style: solid
   text-decoration: none
+
+#errorMess
+  color: #ff0000
+  font-size: 20px
+  margin: auto
 
 /* Nav */
 .img__logo

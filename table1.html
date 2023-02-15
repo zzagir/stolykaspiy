@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sweetalert.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
@@ -45,13 +48,15 @@
           <div class="popup-bg">
             <div class="popup">
               <img class="close-popup" src="img/close.png" alt="">
-              <form>
-                <p class="popup-text" style="text-align: center; font-size: 35px;">Заказать звонок</p>
-                <input type="text" name="name" placeholder="Имя">
-                <input type="tel" name="phone" placeholder="Телефон">
-                <p class="popup-text">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
-                    href="#">своих персональных данных</a></p>
-                <button type="submit">Отправить</button>
+              <form class="header-form">
+                <p class=" popup-text" style="text-align: center; font-size: 35px;">Заказать звонок</p>
+                <input type="text" name="name" id="header-name" placeholder="Имя">
+                <input type="tel" name="phone" id="header-phone" placeholder="Телефон">
+                <div id="errorMess"></div>
+                <p class="popup-text-down">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
+                    href="#">своих
+                    персональных данных</a></p>
+                <button type="submit" class="popup-button">Отправить</button>
               </form>
             </div>
           </div>
@@ -77,7 +82,7 @@
     <div class="container" style="display: flex;">
 
       <div class="slider-fotorama">
-        <div class="fotorama" data-width="611" data-height="344" data-allowfullscreen="true" data-loop="true"
+        <div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true"
           data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs">
           <img src="img/11.jpg">
           <img src="img/22.jpg">
@@ -91,22 +96,40 @@
         <p style="margin-left: 30px; font-weight: 200; font-size: 35px;">Стол «Королевский»</p>
         <div style="margin: 10px 0 5px 30px;">
           <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 10px;">Размеры стола (ДхШ), см:</p>
-          <button class="size-price first-price active">120(160)x85</button>
-          <button class="size-price second-price">160(200)x92</button>
+          <button class="size-price first-price active" data-size="120(160)x85">120(160)x85</button>
+          <button class="size-price second-price" data-size="160(200)x92">160(200)x92</button>
         </div>
         <div style="margin: 0 0 0 30px;">
-          <button class="size-price third-price">140(180)x85</button>
-          <button class="size-price fourth-price">200(240)x100</button>
+          <button class="size-price third-price" data-size="140(180)x85">140(180)x85</button>
+          <button class="size-price fourth-price" data-size="200(240)x100">200(240)x100</button>
         </div>
         <div style="margin: 10px 0 0 30px;">
           <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 5px;">Варианты цветов:</p>
-          <button class="size-color first-color active"></button>
-          <button class="size-color second-color"></button>
+          <button class="size-color first-color active" id="first-color" aria-label="Темный"></button>
+          <button class="size-color second-color" id="second-color" aria-label="Белый"></button>
         </div>
         <p style="color: #ccc; margin: 10px 0 -10px 30px; font-weight: 200; font-size: 25px;">Цена:</p>
         <div class="price__button">
-          <p class="price" style="margin-left: 30px; font-weight: 200; font-size: 30px; width: 130px;">150 000₽</p>
-          <button class="buy__button">Заказать</button>
+          <p class="price">150 000₽</p>
+          <button class="buy__button open-popup-shop" onclick="">Заказать</button>
+        </div>
+      </div>
+
+      <div class="popup-shop-bg">
+        <div class="popup-shop">
+          <img class="close-popup" src="img/close.png" alt="">
+          <form class="table-form">
+            <p class="popup-text" style="text-align: center; font-size: 35px;">Заказать стол</p>
+            <input type="text" name="name" id="table-name" placeholder="Имя">
+            <input type="tel" name="phone" id="table-phone" placeholder="Телефон">
+            <p style="color: black">Цвет: </p>
+            <div class="prosto"></div>
+            <div id="errorMessTable"></div>
+            <p class="popup-text-down">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
+                href="#">своих
+                персональных данных</a></p>
+            <button class="popup-shop-button" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
 
