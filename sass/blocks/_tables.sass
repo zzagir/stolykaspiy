@@ -71,6 +71,7 @@
     height: 100%
     background: rgba(0,0,0,0.8)
     display: none
+    z-index: 1001
 
 .popup-shop
     position: absolute
@@ -117,6 +118,9 @@
 
 .no-scroll
     overflow-y: hidden
+
+.scroll
+    overflow-y: auto
 
 .popup-text
     color: #000
@@ -185,3 +189,27 @@ table.iksweb tr:hover
 table.iksweb tr:hover td
     color: #000000
     cursor: default
+
+// COUNTER
+
+.counter
+    margin: 20px 0 0 30px
+    display: inline-flex
+    column-gap: 7px
+    align-items: center
+
+#buttonCountMinus,
+#buttonCountPlus
+    font-family: Manrope
+    font-size: 22px
+    flex: 0 0 40px
+    height: 40px
+    border: none
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+#buttonCountNumber
+    font-size: 22px

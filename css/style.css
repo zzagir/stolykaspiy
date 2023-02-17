@@ -823,6 +823,7 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   display: none;
+  z-index: 1001;
 }
 
 .popup-shop {
@@ -884,6 +885,10 @@ body {
 
 .no-scroll {
   overflow-y: hidden;
+}
+
+.scroll {
+  overflow-y: auto;
 }
 
 .popup-text {
@@ -969,4 +974,43 @@ table.iksweb tr:hover {
 table.iksweb tr:hover td {
   color: #000000;
   cursor: default;
+}
+
+.counter {
+  margin: 20px 0 0 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 7px;
+     -moz-column-gap: 7px;
+          column-gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#buttonCountMinus,
+#buttonCountPlus {
+  font-family: Manrope;
+  font-size: 22px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+#buttonCountNumber {
+  font-size: 22px;
 }/*# sourceMappingURL=style.css.map */

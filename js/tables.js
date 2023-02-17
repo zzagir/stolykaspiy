@@ -5,7 +5,6 @@ function reloadScript(url) {
     document.documentElement.appendChild(script);
 };
 
-
 $('.size-price').click(function () {
     $('.size-price').removeClass('active');
     $('.size-price').attr('id', '');
@@ -38,28 +37,52 @@ $('.popup-shop-bg').click(function (e) {
     }
 });
 
-jQuery(document).ready(function () {
-    jQuery(".buy__button").click(function () {
-        let size = document.querySelector("#size_active").textContent;
-        let color = document.querySelector("#color_active").cloneNode(true);
-        let price = document.querySelector(".price").textContent;
-        color.style.cursor = 'auto';
-        color.setAttribute("disabled", "disabled");
-        color.classList.remove('active');
+let buttonCountPlus = document.getElementById("buttonCountPlus");
+let buttonCountMinus = document.getElementById("buttonCountMinus");
+let count = document.getElementById("buttonCountNumber");
+let countTwo = document.getElementById("num");
 
-        $(".buy").html(size);
-        $(".buy1").html(color);
-        $(".buy2").html(price);
-
-    })
-})
-// let size = document.querySelector("#size_active").textContent;
-// let color = document.querySelector("#color_active").getAttribute("data-color");
-// let color = document.querySelector("#color_active").cloneNode(true);
-// color.style.cursor = 'auto';
-// color.classList.remove('active');
-
-// $(".buy").html(size);
-// $(".buy1").html(color);
+let number = document.querySelector("#buttonCountNumber").textContent;
+number = Number(number)
 
 
+buttonCountPlus.onclick = function () {
+    let priceOne = document.querySelector('.price').textContent;
+    priceOne = priceOne.replace(" ", "").replace("₽", "");
+    if (number <= 49) {
+        number++;
+        count.innerHTML = number;
+        countTwo.value = number * priceOne;
+    }
+};
+
+buttonCountMinus.onclick = function () {
+    let priceOne = document.querySelector('.price').textContent;
+    priceOne = priceOne.replace(" ", "").replace("₽", "");
+    if (number >= 31) {
+        number--;
+        count.innerHTML = number;
+        countTwo.value = number * priceOne;
+    }
+};
+
+$(".buy__button").click(function () {
+    let size = document.querySelector("#size_active").textContent;
+    let color = document.querySelector("#color_active").cloneNode(true);
+    let price = document.querySelector('.price').textContent;
+
+    priceOne = price.replace(" ", "").replace("₽", "");
+    count.innerHTML = number;
+    countTwo.value = number * priceOne;
+    let priceTwo = countTwo.value;
+    priceTwo = Number(priceTwo)
+    priceTwo = priceTwo.toLocaleString("de-DE");
+    priceTwo = priceTwo + "₽";
+
+    color.style.cursor = 'auto';
+    color.setAttribute("disabled", "disabled");
+    color.classList.remove('active');
+    $(".buy").html(size);
+    $(".buy1").html(color);
+    $(".buy2").html(priceTwo);
+});
