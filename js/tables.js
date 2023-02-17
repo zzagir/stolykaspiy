@@ -3,42 +3,21 @@ function reloadScript(url) {
     script.type = 'text/javascript';
     script.src = url;
     document.documentElement.appendChild(script);
-}
-
-
-let price = document.querySelector('.price');
-$('.first-price').click(function () {
-    price.textContent = '150 000₽';
-});
-$('.second-price').click(function () {
-    price.textContent = '200 000₽';
-});
-$('.third-price').click(function () {
-    price.textContent = '250 000₽';
-});
-$('.fourth-price').click(function () {
-    price.textContent = '300 000₽';
-});
+};
 
 
 $('.size-price').click(function () {
     $('.size-price').removeClass('active');
+    $('.size-price').attr('id', '');
     $(this).addClass('active');
+    $(this).attr('id', 'size_active');
 });
 
 $('.size-color').click(function () {
     $('.size-color').removeClass('active');
+    $('.size-color').attr('id', '');
     $(this).addClass('active');
-});
-
-$('.first-color').click(function () {
-    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/11.jpg"><img src="img/22.jpg"><img src="img/33.jpg"><img src="img/44.jpg"></div>');
-    reloadScript('js/fotorama.js');
-});
-
-$('.second-color').click(function () {
-    $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>');
-    reloadScript('js/fotorama.js');
+    $(this).attr('id', 'color_active');
 });
 
 $('.open-popup-shop').click(function (e) {
@@ -58,3 +37,29 @@ $('.popup-shop-bg').click(function (e) {
         $('html').removeClass('no-scroll');
     }
 });
+
+jQuery(document).ready(function () {
+    jQuery(".buy__button").click(function () {
+        let size = document.querySelector("#size_active").textContent;
+        let color = document.querySelector("#color_active").cloneNode(true);
+        let price = document.querySelector(".price").textContent;
+        color.style.cursor = 'auto';
+        color.setAttribute("disabled", "disabled");
+        color.classList.remove('active');
+
+        $(".buy").html(size);
+        $(".buy1").html(color);
+        $(".buy2").html(price);
+
+    })
+})
+// let size = document.querySelector("#size_active").textContent;
+// let color = document.querySelector("#color_active").getAttribute("data-color");
+// let color = document.querySelector("#color_active").cloneNode(true);
+// color.style.cursor = 'auto';
+// color.classList.remove('active');
+
+// $(".buy").html(size);
+// $(".buy1").html(color);
+
+

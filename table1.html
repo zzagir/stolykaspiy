@@ -49,10 +49,10 @@
             <div class="popup">
               <img class="close-popup" src="img/close.png" alt="">
               <form class="header-form">
-                <p class=" popup-text" style="text-align: center; font-size: 35px;">Заказать звонок</p>
+                <p class="popup-text">Заказать звонок</p>
+                <div id="errorMess"></div>
                 <input type="text" name="name" id="header-name" placeholder="Имя">
                 <input type="tel" name="phone" id="header-phone" placeholder="Телефон">
-                <div id="errorMess"></div>
                 <p class="popup-text-down">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
                     href="#">своих
                     персональных данных</a></p>
@@ -96,7 +96,7 @@
         <p style="margin-left: 30px; font-weight: 200; font-size: 35px;">Стол «Королевский»</p>
         <div style="margin: 10px 0 5px 30px;">
           <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 10px;">Размеры стола (ДхШ), см:</p>
-          <button class="size-price first-price active" data-size="120(160)x85">120(160)x85</button>
+          <button class="size-price first-price active" data-size="120(160)x85" id="size_active">120(160)x85</button>
           <button class="size-price second-price" data-size="160(200)x92">160(200)x92</button>
         </div>
         <div style="margin: 0 0 0 30px;">
@@ -105,13 +105,13 @@
         </div>
         <div style="margin: 10px 0 0 30px;">
           <p style="color: #ccc; font-size: 25px; font-weight: 200; margin-bottom: 5px;">Варианты цветов:</p>
-          <button class="size-color first-color active" id="first-color" aria-label="Темный"></button>
-          <button class="size-color second-color" id="second-color" aria-label="Белый"></button>
+          <button class="size-color first-color active" data-color="Темный" id="color_active"></button>
+          <button class="size-color second-color" data-color="Белый"></button>
         </div>
         <p style="color: #ccc; margin: 10px 0 -10px 30px; font-weight: 200; font-size: 25px;">Цена:</p>
         <div class="price__button">
           <p class="price">150 000₽</p>
-          <button class="buy__button open-popup-shop" onclick="">Заказать</button>
+          <button class="buy__button open-popup-shop">Заказать</button>
         </div>
       </div>
 
@@ -119,12 +119,16 @@
         <div class="popup-shop">
           <img class="close-popup" src="img/close.png" alt="">
           <form class="table-form">
-            <p class="popup-text" style="text-align: center; font-size: 35px;">Заказать стол</p>
+            <p class="popup-text">Заказать стол</p>
+            <div id="errorMessTable"></div>
             <input type="text" name="name" id="table-name" placeholder="Имя">
             <input type="tel" name="phone" id="table-phone" placeholder="Телефон">
-            <p style="color: black">Цвет: </p>
-            <div class="prosto"></div>
-            <div id="errorMessTable"></div>
+            <p style="color: black; font-size: 25px; text-align: center; margin-top: 10px;">Размер: </p>
+            <p style="color: #303030; font-size: 25px; text-align: center; margin-bottom: 15px;" class="buy"></p>
+            <p style="color: black; font-size: 25px; text-align: center;">Цвет: </p>
+            <p style="color: #303030; font-size: 25px; text-align: center; margin-bottom: 15px;" class="buy1"></p>
+            <p style="color: black; font-size: 25px; text-align: center;">Цена: </p>
+            <p style="color: #303030; font-size: 25px; text-align: center; margin-bottom: 15px;" class="buy2"></p>
             <p class="popup-text-down">Нажимая кнопку «Отправить» вы соглашаетесь на обработку <a class="popup-a"
                 href="#">своих
                 персональных данных</a></p>
@@ -208,17 +212,17 @@
         </div>
 
         <div class="inner__2">
-          <div class="inner__maps">
-            <h3 class="down__h3">Мы на картах</h3>
-            <iframe src="https://yandex.ru/map-widget/v1/-/CCUnzAvXgC" width="520" height="300" frameborder="1"
-              allowfullscreen="true" style="position:relative; border-radius:10px; border: 0;"></iframe>
-          </div>
-
           <div class="inner__grafik">
             <h3 class="down__h3">График работы</h3>
             <p class="down__p">Пн-Пт: 10:00 - 20:00</p>
             <p class="down__p">Сб-Вс: 11:00 - 29:00</p>
           </div>
+          <div class="inner__maps">
+            <h3 class="down__h3">Мы на картах</h3>
+            <iframe src="https://yandex.ru/map-widget/v1/-/CCUnzAvXgC" width="520" height="300" frameborder="1"
+              allowfullscreen="true" style="border-radius:10px; border: 0;"></iframe>
+          </div>
+
         </div>
 
 
@@ -265,10 +269,33 @@
       </div>
     </div>
   </footer>
-  <script>
 
-  </script>
   <script src="js/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript">
+    $('.first-color').click(function () {
+      $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/11.jpg"><img src="img/22.jpg"><img src="img/33.jpg"><img src="img/44.jpg"></div>');
+      reloadScript('js/fotorama.js');
+    });
+
+    $('.second-color').click(function () {
+      $('.slider-fotorama').html('<div class="fotorama" data-width="611" data-height="370" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>');
+      reloadScript('js/fotorama.js');
+    });
+
+    let price = document.querySelector('.price');
+    $('.first-price').click(function () {
+      price.textContent = '150 000₽';
+    });
+    $('.second-price').click(function () {
+      price.textContent = '200 000₽';
+    });
+    $('.third-price').click(function () {
+      price.textContent = '250 000₽';
+    });
+    $('.fourth-price').click(function () {
+      price.textContent = '300 000₽';
+    });
+  </script>
   <script src="js/script.js"></script>
   <script src="js/tables.js"></script>
   <script src="js/form.js"></script>

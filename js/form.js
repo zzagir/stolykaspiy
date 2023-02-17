@@ -37,8 +37,9 @@ jQuery(document).ready(function () {
     jQuery(".table-form").submit(function () { // Событие отправки с формы
         let name = $('#table-name').val().trim(); // Собираем данные из полей
         let phone = $('#table-phone').val().trim(); // Собираем данные из полей
-        let color = $('.size-color');
-        console.log(color)
+        let size = document.querySelector("#size_active").textContent;
+        let color = document.querySelector("#color_active").getAttribute("data-color");
+        let price = document.querySelector(".price").textContent;
         if ((name == "") && (phone == "")) {
             $('#errorMessTable').text("Заполните все поля!");
             $('#table-name').css("border", "1px solid #ff0000");
@@ -72,7 +73,7 @@ jQuery(document).ready(function () {
             type: "POST", // Метод отправки
             url: "../sendform.php", // Путь к PHP обработчику sendform.php
             cache: false,
-            data: { 'name': name, 'phone': phone },
+            data: { 'name': name, 'phone': phone, 'size': size, 'color': color, 'price': price },
             success: swal({
                 title: "С вами свяжутся в скором времени!",
                 type: "success",
@@ -81,7 +82,7 @@ jQuery(document).ready(function () {
             })
         });
         $(this).find('input, textarea').prop('disabled', true);
-        $(this).find('button').prop('disabled', true).html('Готово!').css({ "background": "#428770", "cursor": "auto" });
+        $(this).find('.popup-shop-button').prop('disabled', true).html('Готово!').css({ "background": "#428770", "cursor": "auto" });
         event.preventDefault();
     });
 });
