@@ -1,9 +1,5 @@
 .down
     margin-top: 80px
-.down__inner
-    padding-left: 115px
-    padding-top: 20px
-    padding-right: 20px
 
 .down__h3
     font-weight: 200
@@ -15,7 +11,6 @@
     font-weight: 200
     font-size: 30px
     color: #ccc
-    width: 295px
 
 .a_links
     margin-left: 10px
@@ -34,15 +29,92 @@
 .inner__1
     display: flex
     margin-bottom: 100px
+    justify-content: space-around
 
 .inner__2
     display: flex
+    justify-content: space-around
 
 .inner__grafik
-    margin-right: 130px
+    width: 328px
 
-.inner__contacts
-    margin-right: 110px
+iframe
+    border-radius: 10px
+    border: 0
 
-// .inner__maps
-//     margin-right: 159px
+// ADAPTIVE
+@media (max-width: 1670px)
+    .down
+        margin-top: 60px
+
+@media (max-width: 1222px)
+
+@media (max-width: 1130px)
+    .down
+        padding: 0 40px
+
+    iframe
+        width: 400px
+
+    .inner__adres .down__p
+        width: 402px
+
+    .inner__grafik
+        width: auto
+
+    .down__inner
+        padding: 0 30px
+
+@media (max-width: 946px)
+    .inner__1,
+    .inner__2
+        display: block
+        margin-bottom: 30px
+        text-align: center
+
+    .down
+        padding: 0
+        margin-top: 30px
+
+    .down__inner
+        padding: 0
+
+    .inner__adres .down__p
+        width: 100%
+
+    .inner__contacts
+        margin-bottom: 30px
+
+    .inner__grafik
+        margin-bottom: 30px
+
+    .a_links
+        margin-left: 0
+
+    .down__p
+        margin-left: 0
+        padding: 0 10px
+
+    iframe
+        border-radius: 0
+        width: 100%
+
+@media (max-width: 350px)
+    .a_links
+        font-size: 25px
+
+    .down__h3
+        font-size: 25px
+
+    .down__p
+        font-size: 22px
+
+@media (max-width: 292px)
+    .a_links
+        font-size: 20px
+
+    .down__h3
+        font-size: 20px
+
+    .down__p
+        font-size: 18px

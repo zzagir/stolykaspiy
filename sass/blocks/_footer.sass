@@ -1,11 +1,9 @@
 /* FOOTER */
 
-.footer 
+.footer
   margin-top: 50px
 
-
-
-.footer__all 
+.footer__all
   display: flex
   color: #fff
   padding: 30px
@@ -16,60 +14,44 @@
   backdrop-filter: blur(8px)
   border-radius: 30px 30px 0 0
 
-
-.ul-fixed 
+.ul-fixed
   list-style-type: none
-
-
-
-
 
 .footer__katalog,
 .footer__info,
-.footer__social 
+.footer__social
   letter-spacing: 1px
 
-
-.footer__info 
+.footer__info
   display: grid
   justify-items: start
 
-
 .katalog__title,
 .info__title,
-.social__title 
+.social__title
   font-weight: 400
   font-size: 20px
   letter-spacing: 2px
 
-
-.katalog__text 
+.katalog__text
   font-weight: 400
   color: #aaa
 
-
-
-.info__text 
+.info__text
   color: #aaa
-
   text-decoration: none
-
   transition: color .1s linear
 
-
-
-.info__text:hover 
+.info__text:hover
   color: #428770
 
-
-.social__logos 
-  a 
+.social__logos
+  a
     display: inline-flex
     padding-top: 2px
     margin-right: 5px
 
-
-.social__logo_inst 
+.social__logo_inst
   background-image: url(../img/inst.png)
 
   width: 22px
@@ -77,8 +59,7 @@
 
   transition: all 0.2s ease-in-out
 
-
-.social__logo_vk 
+.social__logo_vk
   background-image: url(../img/vk.png)
 
   width: 24px
@@ -86,11 +67,49 @@
 
   transition: all 0.2s ease-in-out
 
-
-.social__logo_inst:hover 
+.social__logo_inst:hover
   background-image: url(../img/inst2.png)
 
-
-.social__logo_vk:hover 
+.social__logo_vk:hover
   background-image: url(../img/vk2.png)
 
+// ADAPTIV
+
+@media (max-width: 946px)
+  .footer
+    margin-top: 0
+
+  .footer__all
+    border-radius: 0
+
+  .katalog__title,
+  .info__title,
+  .social__title
+    font-size: 18px
+
+  .info__text
+    font-size: 15px
+
+@media (max-width: 600px)
+  .footer__all
+    padding: 15px
+    text-align: center
+    display: block
+
+  .footer__katalog,
+  .footer__info,
+  .footer__social
+    margin-bottom: 10px
+    text-align: center
+    display: block
+
+  .katalog__title,
+  .info__title,
+  .social__title
+    font-size: 21px
+
+  .info__text
+    font-size: 17px
+
+  .ul-fixed
+    justify-content: center

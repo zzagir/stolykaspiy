@@ -21,12 +21,12 @@ $('.size-color').click(function () {
 
 $('.open-popup-shop').click(function (e) {
     e.preventDefault();
-    $('.popup-shop-bg').fadeIn(800);
+    $('.popup-shop-bg').fadeIn(400);
     $('html').addClass('no-scroll');
 });
 
 $('.close-popup').click(function () {
-    $('.popup-shop-bg').fadeOut(800);
+    $('.popup-shop-bg').fadeOut(400);
     $('html').removeClass('no-scroll');
 });
 
@@ -47,22 +47,16 @@ number = Number(number)
 
 
 buttonCountPlus.onclick = function () {
-    let priceOne = document.querySelector('.price').textContent;
-    priceOne = priceOne.replace(" ", "").replace("₽", "");
     if (number <= 49) {
         number++;
         count.innerHTML = number;
-        countTwo.value = number * priceOne;
     }
 };
 
 buttonCountMinus.onclick = function () {
-    let priceOne = document.querySelector('.price').textContent;
-    priceOne = priceOne.replace(" ", "").replace("₽", "");
-    if (number >= 31) {
+    if (number >= 2) {
         number--;
         count.innerHTML = number;
-        countTwo.value = number * priceOne;
     }
 };
 
@@ -84,5 +78,6 @@ $(".buy__button").click(function () {
     color.classList.remove('active');
     $(".buy").html(size);
     $(".buy1").html(color);
-    $(".buy2").html(priceTwo);
+    $(".buy2").html(number);
+    $(".buy3").html(priceTwo);
 });

@@ -1,5 +1,5 @@
 .intro
-  margin-top: 70px
+  margin-top: 60px
   text-align: center
 
 .intro .container
@@ -12,8 +12,8 @@
   width: 800px
   height: 450px
 
-  margin-left: 20px
-  margin-right: 5px
+  margin-left: 10px
+  margin-right: 10px
   margin-top: 20px
   object-fit: cover
   border-radius: 15px
@@ -37,11 +37,6 @@
 .img__text:hover
   color: #fff
 
-.intro:after
-  content: ''
-  display: table
-  clear: both
-
 .filter__img
   margin: 15px 20px
 
@@ -50,7 +45,6 @@
   text-decoration: none
 
 .img__main
-  position: absolute
   opacity: 0
 
   // color: #428770
@@ -59,13 +53,180 @@
   font-weight: 200
 
 .img__title
-  bottom: 100px
-  left: 190px
+  position: absolute
+  bottom: 80px
+  left: calc(50% - 218px)
   transition: text-shadow 0.5s ease
   text-shadow: 0 0 20px #000
 
 .img__text
-  bottom: 20px
-  left: 327px
+  position: absolute
+  bottom: 10px
+  left: calc(50% - 86px)
   transition: text-shadow 0.5s ease
   text-shadow: 0 0 20px #000
+
+// ADAPTIV
+
+@media (max-width: 1670px)
+  .intro__img
+    width: 650px
+    height: 380px
+
+  .img__main
+    font-size: 40px
+
+  .img__title
+    bottom: 60px
+    left: calc(50% - 172px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 66px)
+
+@media (max-width: 1376px)
+  .intro__img
+    width: 530px
+    height: 300px
+    margin-left: 8px
+    margin-right: 8px
+    margin-top: 12px
+
+  .img__main
+    font-size: 35px
+
+  .img__title
+    bottom: 60px
+    left: calc(50% - 150px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 57px)
+
+@media (max-width: 1130px)
+  .intro__img
+    width: 430px
+    height: 250px
+    border-radius: 10px
+
+  .img__main
+    font-size: 30px
+
+  .img__title
+    bottom: 50px
+    left: calc(50% - 128px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 48px)
+
+@media (max-width: 946px)
+  .intro__img
+    width: 350px
+    height: 200px
+
+  .img__main
+    font-size: 25px
+
+  .img__title
+    bottom: 45px
+    left: calc(50% - 104px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 40px)
+
+@media (max-width: 770px)
+  .intro__img
+    width: 290px
+    height: 160px
+    margin-left: 5px
+    margin-right: 5px
+    margin-top: 8px
+
+  .img__main
+    font-size: 20px
+
+  .img__title
+    bottom: 35px
+    left: calc(50% - 89px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 34px)
+
+@media (max-width: 630px)
+  .intro__img
+    width: 500px
+    height: 290px
+    margin-left: 5px
+    margin-right: 5px
+    margin-top: 15px
+
+  .img__main
+    font-size: 35px
+
+  .img__title
+    bottom: 60px
+    left: calc(50% - 156px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 57px)
+
+@media (max-width: 540px)
+  .intro__img
+    width: 420px
+    height: 250px
+    margin-left: 5px
+    margin-right: 5px
+    margin-top: 15px
+
+  .img__main
+    font-size: 30px
+
+  .img__title
+    bottom: 50px
+    left: calc(50% - 133px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 48px)
+
+@media (max-width: 460px)
+  .intro__img
+    width: 300px
+    height: 190px
+    margin-left: 5px
+    margin-right: 5px
+    margin-top: 10px
+
+  .img__main
+    font-size: 25px
+
+  .img__title
+    bottom: 45px
+    left: calc(50% - 112px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 40px)
+
+@media (max-width: 335px)
+  .intro__img
+    width: 230px
+    height: 140px
+    margin-left: 5px
+    margin-right: 5px
+    margin-top: 5px
+
+  .img__main
+    font-size: 20px
+
+  .img__title
+    bottom: 35px
+    left: calc(50% - 89px)
+
+  .img__text
+    bottom: 10px
+    left: calc(50% - 34px)
