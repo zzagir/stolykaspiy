@@ -1,9 +1,4 @@
-function reloadScript(url) {
-    let script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-    document.documentElement.appendChild(script);
-};
+let price = document.querySelector('.price');
 
 $('.size-price').click(function () {
     $('.size-price').removeClass('active');

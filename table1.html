@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sweetalert.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-  <link rel="shortcut icon" href="img/lg.png" type="image/png">
+  <link rel="shortcut icon" href="img/ico/lg.png" type="image/png">
   <title>Stoly Kaspiy</title>
 </head>
 
@@ -47,7 +48,7 @@
 
           <div class="popup-bg">
             <div class="popup">
-              <img class="close-popup" src="img/close.png" alt="">
+              <img class="close-popup" src="img/ico/close.png" alt="">
               <form class="header-form">
                 <p class="popup-text">Заказать звонок</p>
                 <div id="errorMess"></div>
@@ -71,7 +72,7 @@
         </nav>
 
         <div class="header__logo"><a href="index.html">
-            <img src="img/logo4.png" alt="" class="img__logo"></a>
+            <img src="img/ico/logo.png" alt="" class="img__logo"></a>
         </div>
 
       </div>
@@ -79,16 +80,13 @@
   </header>
 
   <div class="slider">
-    <div class="container" style="display: flex;">
+    <div class="container container__slider" style="display: flex;">
 
-      <div class="slider-fotorama">
-        <div class="fotorama" data-width="780" data-height="420" data-allowfullscreen="true" data-loop="true"
-          data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs">
-          <img src="img/11.jpg">
-          <img src="img/22.jpg">
-          <img src="img/33.jpg">
-          <img src="img/44.jpg">
-        </div>
+      <div class="slider-slider">
+        <img src="img/ico/left.png" alt="" class="btn1">
+        <div class="blockWbg b1" style="background-image: url(img/tables/2/1.jpg);"></div>
+        <img src="img/ico/right.png" alt="" class="btn2">
+        <div class="chislo"></div>
       </div>
 
 
@@ -123,7 +121,7 @@
 
       <div class="popup-shop-bg scroll">
         <div class="popup-shop">
-          <img class="close-popup" src="img/close.png" alt="">
+          <img class="close-popup" src="img/ico/close.png" alt="">
           <form class="table-form">
             <p class="popup-text">Заказать стол</p>
             <div id="errorMessTable"></div>
@@ -146,6 +144,21 @@
       </div>
 
     </div>
+  </div>
+
+
+  <div class="slider-popup-bg">
+    <div class="slider-popup">
+      <img class="slider-close-popup" src="img/ico/close.png" alt="">
+      <div class="slider1">
+        <img src="img/ico/left.png" alt="" class="btn3">
+        <div class="blockWbg1 b2" style="background-image: url(img/tables/2/1.jpg);"></div>
+        <img src="img/ico/right.png" alt="" class="btn4">
+        <div class="chislo1"></div>
+      </div>
+    </div>
+  </div>
+
   </div>
 
   <div class="product-description">
@@ -239,7 +252,6 @@
     </div>
     <!-- /.container -->
   </div>
-  <!-- /.down -->
 
   <footer class="footer">
     <div class="container">
@@ -281,17 +293,10 @@
   <script src="js/jquery-3.6.3.min.js"></script>
   <script src="js/tables.js"></script>
   <script type="text/javascript">
-    $('.first-color').click(function () {
-      $('.slider-fotorama').html('<div class="fotorama" data-width="780" data-height="420" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/11.jpg"><img src="img/22.jpg"><img src="img/33.jpg"><img src="img/44.jpg"></div>');
-      reloadScript('js/fotorama.js');
-    });
+    let maxPhoto = 5;
+    let tablePhoto = 2;
 
-    $('.second-color').click(function () {
-      $('.slider-fotorama').html('<div class="fotorama" data-width="780" data-height="420" data-allowfullscreen="true" data-loop="true" data-arrows="always" style="background-color: white; border-radius: 10px;" data-nav="thumbs"><img src="img/1.jpg"><img src="img/2.jpg"><img src="img/3.jpg"><img src="img/4.jpg"></div>');
-      reloadScript('js/fotorama.js');
-    });
 
-    let price = document.querySelector('.price');
     $('.first-price').click(function () {
       price.textContent = '150 000₽';
     });
@@ -304,12 +309,13 @@
     $('.fourth-price').click(function () {
       price.textContent = '300 000₽';
     });
+
   </script>
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
   <script src="js/sweetalert.min.js"></script>
+  <script src="js/slider.js"></script>
   <script src="js/fotorama.js"></script>
-  <script type="text/javascript" src="https://spikmi.org/Widget?Id=16171"></script>
 
 </body>
 
